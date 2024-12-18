@@ -18,7 +18,10 @@ def context_run(text):
             if 'nt]' in put:
                 dm=open(put[3:-1],'r').readline()
                 dm=dm.split(',')
+                if dm[-1][-1]=='\n':dm[-1]=dm[-1][0:-1]
                 mp.register(dm[0],dm[1],dm[2])
             if 'lg]' in put:
                 mian.lang=put[3:-1]
+            if '[dir]' in put:
+                for i in mian.tg:print(i.name,i.hj,sep='.')
             put=''

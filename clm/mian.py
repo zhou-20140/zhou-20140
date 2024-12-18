@@ -34,5 +34,8 @@ def find(file):
         return 0
 
 def runcode(n):
-    print(utc.context_run(tg[n].context))
+    if tg[n].hj=='tex' or tg[n].hj=='uex':
+        print(utc.context_run(tg[n].context))
+    else:
+        print('run_code error!\n')
 
