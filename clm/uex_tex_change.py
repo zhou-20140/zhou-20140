@@ -24,4 +24,6 @@ def context_run(text):
                 mian.lang=put[3:-1]
             if '[dir]' in put:
                 for i in mian.tg:print(i.name,i.hj,sep='.')
+            if 'dl]' in put:
+                mian.del_fl(put[3:-1])
             put=''
