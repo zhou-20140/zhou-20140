@@ -15,6 +15,9 @@ lang=''
 def add_fl(context,hj,name):
     tg.append(Cl(context,hj,name))
 
+def del_fl(name):
+    del tg[find(name)]
+
 def find(file):
     try:
         name,hj=file.split('.')
