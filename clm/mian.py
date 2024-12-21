@@ -40,5 +40,5 @@ def runcode(n):
     if tg[n].hj=='tex' or tg[n].hj=='uex':
         print(utc.context_run(tg[n].context))
     else:
-        print('run_code error!\n')
+        print('run_code error!\n',lg.inthes(lang,5))
 
