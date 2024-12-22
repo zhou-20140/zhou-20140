@@ -13,7 +13,7 @@ def context_run(text):
             if '[os]' in put:
                 print('clm v2.2.3')
             if 'st]' in put:
-                try:context_run(mian.tg[mian.find(put[3:-1])].context)
+                try:mian.runcode(mian.find(put[3:-1]))
                 except TypeError:print('start error!\n',lg.inthes(mian.lang,3))
             if 'nt]' in put:
                 dm=open(put[3:-1],'r').readline()
