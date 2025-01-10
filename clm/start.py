@@ -1,10 +1,16 @@
 import mian
 import uex_tex_change as utc
 
-mian.add_fl('pt];pt]#error#;','tex','error,retrun')
-mian.add_fl('pt]------------;[os];pt]------------;','tex','start')
+mian.read_date()
 mian.runcode(mian.find('start.tex'))
 mian.lang='english'
 
-while True:
+cts=True
+
+while cts:
     p=utc.context_run(input('<=> '))
+    if p=='stop':
+        print('save date')
+        mian.save_date()
+        print('complet!')
+        cts=False

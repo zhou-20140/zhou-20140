@@ -26,4 +26,7 @@ def context_run(text):
                 for i in mian.tg:print(i.name,i.hj,sep='.')
             if 'dl]' in put:
                 mian.del_fl(put[3:-1])
+            if '[svd]' in put:
+                print()
+                return 'stop'
             put=''

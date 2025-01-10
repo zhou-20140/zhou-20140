@@ -42,3 +42,28 @@ def runcode(n):
     else:
         print('run_code error!\n',lg.inthes(lang,5))
 
+def save_date():
+    file=open('clm\\date\\dw.txt','w')
+    file.write(str(len(tg))+'\n')
+    for i in tg:
+        file.write(' clm\\date\\'+i.name+'.txt'+'#'+i.name+'#'+i.hj)
+    for i in tg:
+        file=open('clm\\date\\'+i.name+'.txt','w')
+        file.write(i.context)
+    file.close()
+
+def read_date():
+    ed=open('clm\\date\\dw.txt','r')
+    text=ed.readlines()[-1].split(' ')
+    hj=[]
+    path=[]
+    name=[]
+    for i in text:
+        hj.append(i.split('#')[-1])
+        name.append(i.split('#')[-2])
+        path.append(i.split('#')[-3])
+    for i in range(int(ed.readlines()[0])):
+        file=open(path[i],'r')
+        add_fl(file.read(),hj[i],name[i])
+        file.close()
+    ed.close()
