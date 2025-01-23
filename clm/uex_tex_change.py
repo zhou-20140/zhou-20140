@@ -18,7 +18,8 @@ def context_run(text):
             if 'nt]' in put:
                 dm=open(put[3:-1],'r').readline()
                 dm=dm.split(',')
-                if dm[-1][-1]=='\n':dm[-1]=dm[-1][0:-1]
+                dm[-1][-1]=='\n'
+                dm[-1]=dm[-1][0:-1]
                 mp.register(dm[0],dm[1],dm[2])
             if 'lg]' in put:
                 mian.lang=put[3:-1]
@@ -27,6 +28,6 @@ def context_run(text):
             if 'dl]' in put:
                 mian.del_fl(put[3:-1])
             if '[svd]' in put:
-                print()
-                return 'stop'
+                mian.cts=False
+                
             put=''

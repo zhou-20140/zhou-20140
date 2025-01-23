@@ -6,11 +6,9 @@ print('read date complet')
 mian.runcode(mian.find('start.tex'))
 mian.lang='english'
 
-cts=True
-while cts:
-    p=utc.context_run(input('<=> '))
-    if p=='stop':
-        print('save date')
-        mian.save_date()
-        print('complet!')
-        cts=False
+while mian.cts:
+    utc.context_run(input('<=> '))
+
+print('save date')
+mian.save_date()
+print('complit')

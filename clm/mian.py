@@ -1,6 +1,8 @@
 import uex_tex_change as utc
 import language as lg
 
+cts=True
+
 class Cl:
     def __init__(self,context,hj,name):
         self.context=context
@@ -34,7 +36,7 @@ def find(file):
 
     if ifn==False:
         print('find error!\n',lg.inthes(lang,2))
-        return 0
+        return find('error,retrun.tex')
 
 def runcode(n):
     if tg[n].hj=='tex' or tg[n].hj=='uex':
