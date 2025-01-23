@@ -55,6 +55,7 @@ def save_date():
 def read_date():
     ed=open('clm\\date\\dw.txt','r')
     text=ed.readlines()[-1].split(' ')
+    del text[0]
     hj=[]
     path=[]
     name=[]
@@ -62,7 +63,7 @@ def read_date():
         hj.append(i.split('#')[-1])
         name.append(i.split('#')[-2])
         path.append(i.split('#')[-3])
-    for i in range(int(ed.readlines()[0])):
+    for i in range(len(text)):
         file=open(path[i],'r')
         add_fl(file.read(),hj[i],name[i])
         file.close()
