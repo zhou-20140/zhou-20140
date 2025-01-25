@@ -1,6 +1,7 @@
 import mian
 import m_app as mp
 import language as lg
+import mod
 
 def context_run(text):
     put=''
@@ -27,6 +28,8 @@ def context_run(text):
                 for i in mian.tg:print(i.name,i.hj,sep='.')
             if 'dl]' in put:
                 mian.del_fl(put[3:-1])
+            if '[mod]' in put:
+                mod.open()
             if '[svd]' in put:
                 mian.cts=False
                 
