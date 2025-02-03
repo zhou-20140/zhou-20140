@@ -6,7 +6,7 @@ def write():
     context=''
     i=0
 
-    print()
+    print('kl code editor\n')
     while True:
         i+=1
         text=input('['+str(i)+'] ')
