@@ -2,7 +2,8 @@ import sys
 sys.path.append("clm//")
 import mian
 
-def write():
+def write():    
+    print("\033c", end="")
     context=''
     i=0
 
@@ -15,4 +16,5 @@ def write():
         context+=text+';'
     
     mian.add_fl(context,'tex',input('name: '))
-    print()
+    mian.log.append('write file')
+    print("\033c", end="")

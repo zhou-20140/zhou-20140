@@ -4,6 +4,7 @@ try:
     mian.read_date()
 except FileNotFoundError:
     print('dw error')
+    mian.log.append('dw error')
     with open('clm\date\dw.txt','w') as f:
         f.write('\n')
     mian.add_fl('pt];pt]#error#;','tex','error,retrun')
@@ -11,6 +12,7 @@ except FileNotFoundError:
     mian.read_date()
 
 print('read date complet')
+mian.log.append('read date complet')
 mian.runcode(mian.find('start.tex'))
 mian.lang='english'
 

@@ -1,18 +1,14 @@
-import mods.game
-import mods.kl
-
 import language as lg
 import mian
-
-def open():
+from mods import kl
+def start_mod():
     mod=input('mod: ')
     
     try:
-
         if mod=='kl':
-            mods.kl.write()
-        if mod=='game':
-            mods.game.main()
+            kl.write()
+
+        
     
     except:
         print('mod error!\n',lg.inthes(mian.lang,5))

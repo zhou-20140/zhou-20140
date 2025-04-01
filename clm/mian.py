@@ -11,7 +11,7 @@ class Cl:
         pass
     pass
 tg=[]
-
+log=[]
 lang=''
 
 def add_fl(context,hj,name):
