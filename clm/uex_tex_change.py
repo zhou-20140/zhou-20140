@@ -2,6 +2,7 @@ import mian
 import m_app as mp
 import language as lg
 import mod
+import picture as pic
 
 def context_run(text):
     put=''
@@ -38,5 +39,13 @@ def context_run(text):
             if '[cln]' in put:
                     print("\033c", end="")
             if '[log]' in put:
-                    for i in mian.log:print(i)                
+                    for i in mian.log:print(i)
+            if '[inf]' in put:
+                pic.pic1()
+                print('system_vision: clm-2.2.7') 
+                print('sytem_kernel: ttl-1.1.0')
+                print('file_block: ',len(mian.tg))
+                print('mod quantity: 1')
+                print('\n#github#  zhou-20140')
+                print('#email#   3991885506@qq.com')              
             put=''
