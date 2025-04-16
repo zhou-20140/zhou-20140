@@ -1,5 +1,5 @@
 {
     "auto_fix_dw": 1,
-    "language": "english"
-    
+    "language": "english",
+    "debug_mode": false
 }
