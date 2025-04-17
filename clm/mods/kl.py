@@ -1,6 +1,6 @@
 import sys
 sys.path.append("clm//")
-import mian
+import clm.main as main
 
 def write():    
     print("\033c", end="")
@@ -15,6 +15,6 @@ def write():
             break
         context+=text+';'
     
-    mian.add_fl(context,'tex',input('name: '))
-    mian.log.append('write file')
+    main.add_fl(context,'tex',input('name: '))
+    main.log.append('write file')
     print("\033c", end="")

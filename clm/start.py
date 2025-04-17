@@ -1,4 +1,4 @@
-import mian
+import clm.main as main
 import uex_tex_change as utc
 import json
 try:
@@ -7,28 +7,28 @@ try:
 
 except:
     print(f"config error!")
-    mian.log.append('config error')
+    main.log.append('config error')
 try:
-    mian.read_date()
+    main.read_date()
 except FileNotFoundError:
     if config_data['auto_fix_dw']:
         print('dw error')
-        mian.log.append('dw error')
+        main.log.append('dw error')
         with open('clm\date\dw.txt','w') as f:
             f.write('\n')
-        mian.add_fl('pt];pt]#error#;','tex','error,retrun')
-        mian.add_fl('pt]------------;[os];pt]------------;','tex','start')
-        mian.read_date()
+        main.add_fl('pt];pt]#error#;','tex','error,retrun')
+        main.add_fl('pt]------------;[os];pt]------------;','tex','start')
+        main.read_date()
 
 print('read date complet')
-mian.log.append('read date complet')
-mian.runcode(mian.find('start.tex'))
-mian.lang=config_data['language']
+main.log.append('read date complet')
+main.runcode(main.find('start.tex'))
+main.lang=config_data['language']
 file.close()
 
-while mian.cts:
+while main.cts:
     utc.context_run(input('<=> '))
 
 print('save date')
-mian.save_date()
+main.save_date()
 print('complit') 

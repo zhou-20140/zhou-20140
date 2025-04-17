@@ -1,5 +1,5 @@
 import language as lg
-import mian
+import clm.main as main
 import os
 from mods import kl
 def start_mod():
@@ -15,4 +15,4 @@ def start_mod():
         
     
     except:
-        print('mod error!\n',lg.inthes(mian.lang,5))
+        print('mod error!\n',lg.inthes(main.lang,5))
