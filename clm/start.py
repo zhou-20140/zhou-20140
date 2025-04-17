@@ -1,8 +1,8 @@
-import clm.main as main
+import main
 import uex_tex_change as utc
 import json
 try:
-    file=open("clm\date\config\config.json", 'r', encoding='utf-8')
+    file=open("clm\date\config\config.json", 'r')
     config_data = json.load(file)
 
 except:

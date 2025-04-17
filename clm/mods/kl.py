@@ -1,6 +1,6 @@
 import sys
 sys.path.append("clm//")
-import clm.main as main
+import main
 
 def write():    
     print("\033c", end="")

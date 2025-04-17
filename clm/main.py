@@ -53,8 +53,12 @@ def save_date():
         file=open('clm\\date\\'+i.name+'.txt','w')
         file.write(i.context)
     file.close()
-    with open('clm\\date\\logs\\log1','a+') as file:
-        file.write('\n'.join(log))
+    import json
+    config_flag=json.load(open('clm\\date\\config\\config.json','r'))
+    if config_flag['auto_save_logs']:
+        with open('clm\\date\\logs\\log1','a+') as file:
+            file.write('\n')
+            file.write('\n'.join(log))
 
 def read_date():
     ed=open('clm\\date\\dw.txt','r')

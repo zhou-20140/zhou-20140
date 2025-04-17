@@ -1,4 +1,4 @@
-import clm.main as main
+import main as main
 import language as lg
 
 def register(name,set_text,path):

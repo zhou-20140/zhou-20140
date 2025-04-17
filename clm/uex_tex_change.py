@@ -1,4 +1,4 @@
-import clm.main as main
+import main
 import m_app as mp
 import language as lg
 import mod
