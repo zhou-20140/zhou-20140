@@ -27,6 +27,8 @@ def context_run(text):
             if 'lg]' in put:
                 main.lang=put[3:-1]
             if '[dir]' in put:
+                print('\n       file list     ')
+                print('--------------------')
                 for i in main.tg:print(i.name,i.hj,sep='.')
             if 'dl]' in put:
                 main.del_fl(put[3:-1])
@@ -39,7 +41,9 @@ def context_run(text):
             if '[cln]' in put:
                     print("\033c", end="")
             if '[log]' in put:
-                    for i in main.log:print(i)
+                    print('\n       log list     ')
+                    print('--------------------')
+                    for i in range(len(main.log)):print(i+1,main.log[i])
             if '[inf]' in put:
                 pic.pic1()
                 print('system_vision: clm-2.2.7') 

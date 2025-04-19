@@ -25,6 +25,7 @@ def find(file):
         name,hj=file.split('.')
     except:
         print('item error!\n',lg.inthes(lang,1))
+        log.append('item error')
         return 0
     n=0
     ifn=False
@@ -36,6 +37,7 @@ def find(file):
 
     if ifn==False:
         print('find error!\n',lg.inthes(lang,2))
+        log.append('find error')
         return find('error,retrun.tex')
 
 def runcode(n):
@@ -43,6 +45,7 @@ def runcode(n):
         print(utc.context_run(tg[n].context))
     else:
         print('run_code error!\n',lg.inthes(lang,5))
+        log.append('run_code error')
 
 def save_date():
     file=open('clm\\date\\dw.txt','w')
